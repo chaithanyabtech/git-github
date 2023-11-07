@@ -1,0 +1,220 @@
+\documentclass[journal,12pt,onecolumn]{article}
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+\usepackage{color}    
+\usepackage{array}    
+\usepackage{longtable}
+\usepackage{calc}     
+\usepackage{hhline}   
+\usepackage{ifthen}   
+\usepackage{lscape}     
+\usepackage{chngcntr}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\DeclareMathOperator*{\Res}{Res}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+%\renewcommand\thesectiondis{\arabic{section}}
+%\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+%\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+%\renewcommand\thetable{\arabic{table}}
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+%\lstset{
+%language=tex,
+%frame=single, 
+%breaklines=true
+%}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\providecommand{\system}[1]{\overset{\mathcal{#1}}{ \longleftrightarrow}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\let\vec\mathbf
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\begin{document}
+\title{Gaussian\\ Problem-9.3.22}
+\date{}
+\author{EE22BTECH11045 - Samudrala Chaithanya}
+\maketitle
+An experiment succeeds twice as often as it fails. Find the probability that in the next six trials, there will be atleast 4 successes. \\
+\solution
+Given, \\Number of trials,
+\begin{align}
+n &= 6
+\end{align}
+\begin{align}
+p &= 2q
+\end{align}
+Where\\
+$p$ = probability of success\\
+$q$ = probability of failure\\
+We know, 
+\begin{align}
+p + q &= 1
+\end{align}
+\begin{align}
+ 3q &= 1
+\end{align}
+\begin{align}
+q &= \frac{1}{3}
+\end{align}
+and
+\begin{align}
+p &= \frac{2}{3}
+\end{align}
+\begin{tabular}[]{|c|c|c|}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                  %%
+%%  This is a LaTeX2e table fragment exported from Gnumeric.        %%
+%%                                                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hline
+Number of trials	&n	&6\\ 
+\hline
+Probability of success	&p	&0.667(2/3)\\
+\hline
+Probability of Failure	&q	&0.333(1/3)\\
+\hline
+\end{tabular}
+\begin{enumerate}
+	\item{Binomial:}\\
+		In binomial distribution, Cumulative Distribution Function is (C.D.F):\\
+		\begin{align}
+			\pr{X=k} &=  \binom{n}{k}\cdot p^{k}\cdot q^{n-k}
+		\end{align}
+		Where\\ $\pr{X=k}$ = Probability of getting k successes in n trials\\
+		Now,
+		\begin{align}
+			\pr{X=4}&=\binom{6}{4}\cdot \left(\frac{2}{3}\right)^{4}\cdot \left(\frac{1}{3}\right)^{6-4}\\
+			&\approx 0.329\\
+			\pr{X=5}&=\binom{6}{5}\cdot \left(\frac{2}{3}\right)^{5}\cdot \left(\frac{1}{3}\right)^{6-5}\\
+			&\approx 0.263\\
+			\pr{X=6}&=\binom{6}{6}\cdot \left(\frac{2}{3}\right)^{6}\cdot \left(\frac{1}{3}\right)^{6-6}\\
+			&\approx 0.088
+		\end{align}
+		The probability of atleast 4 successes is
+		\begin{align}
+			\pr{X\geq4} &= \pr{X=4} + \pr{X=5} + \pr{X=6}\\
+			&= 0.329 + 0.263 + 0.088\\
+			&= 0.680
+		\end{align}
+	
+$\therefore$ Probability of getting atleast 4 successes in the next 6 trials is $0.680$ or $68.00\%$.  \\ \\ \\ \\
+	\item{Gaussian:}\\
+
+		Here, \\ Mean, 
+\begin{align}
+\mu &= np\\
+ &= 4
+\end{align}
+Standard deviation, 
+\begin{align}
+\sigma &= \sqrt{npq}\\
+&\approx 1.63299
+\end{align}
+Probabiliity of atleast 4 successes, $\pr{X\geq4}$ can be written as,
+\begin{align}
+\pr{X\geq4} &= 1-\pr{X<4}
+\end{align} 
+Let us take $X = 4$\\
+Now,Z-score
+\begin{align}
+Z &= \frac{X - \mu}{\sigma} \\
+ &= \frac{4-4}{1.63299} \\
+ &= 0
+\end{align}
+Here, we make use of a fuction called Q-function.
+		\begin{align}
+			\pr{X<k} &= Q(Z)
+		\end{align}
+		Q-function is defined as, 
+		\begin{align}
+			Q(Z) &= \frac{1}{2} erfc \left(\frac{Z}{\sqrt 2}\right)
+		\end{align}
+		Where,
+		\begin{align}
+			erfc(Z) &= 1 + erf(Z)\\
+			&= 1 + \frac{2}{\sqrt \pi}\int_{0}^{Z}e^{-X^2}\cdot dx
+		\end{align}
+Here,			
+\begin{align}
+	\pr{X<4} &= Q(0)\\
+	&= \frac{1}{2} (1)\\
+	&= 0.5
+\end{align}
+\begin{align}
+\implies \pr{X\geq4} &= 1-\pr{X<4}\\
+	&= 1- 0.5\\
+	&= 0.5
+\end{align}
+$\therefore$ Probability of getting atleast 4 successes in the next 6 trials is approximately $0.5$ or $50.00\%$. 
+\end{enumerate}
+\end{document}
